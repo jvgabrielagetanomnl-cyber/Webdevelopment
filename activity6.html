@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CPU Scheduling — Round Robin</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f2f2f2;
+    color: #1a1a2e;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+  }
+
+  h2.subtitle {
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  table {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px auto;
+    border-collapse: collapse;
+    background: #fdfdf5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  th, td {
+    border: 1px solid #3d3d5c;
+    padding: 14px 10px;
+    text-align: center;
+    color: #23235c;
+  }
+
+  th {
+    background: #dcdce8;
+    font-size: 1rem;
+  }
+
+  tfoot td {
+    font-weight: bold;
+    background: #eaeaf5;
+  }
+
+  h2.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .gantt-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .gantt-chart {
+    display: flex;
+    border: 1px solid #3d3d5c;
+  }
+
+  .gantt-block {
+    flex-grow: 1;
+    background: #fdfdf5;
+    border-right: 1px solid #3d3d5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0;
+    color: #23235c;
+    font-weight: bold;
+  }
+
+  .gantt-block:last-child {
+    border-right: none;
+  }
+
+  .gantt-times {
+    display: flex;
+    margin-top: 4px;
+  }
+
+  .gantt-times span {
+    flex-grow: 1;
+    text-align: left;
+    color: #23235c;
+    font-size: 0.9rem;
+    padding-left: 2px;
+  }
+
+  .quantum-note {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+  }
+</style>
+</head>
+<body>
+
+<h1>CPU Scheduling</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Process</th>
+      <th>Arrival Time</th>
+      <th>Burst Time</th>
+      <th>Completion Time</th>
+      <th>Turnaround Time</th>
+      <th>Waiting Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>14</td>
+      <td>14</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>15</td>
+      <td>14</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>18</td>
+      <td>16</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>P4</td>
+      <td>3</td>
+      <td>3</td>
+      <td>12</td>
+      <td>9</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4"></td>
+      <td>Ave: 13.25</td>
+      <td>Ave: 8.75</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2 class="section-title">Gantt Chart</h2>
+<div class="gantt-wrapper">
+  <div class="gantt-chart">
+    <div class="gantt-block" style="flex-basis: 15.79%;">P1</div>
+    <div class="gantt-block" style="flex-basis: 15.79%;">P2</div>
+    <div class="gantt-block" style="flex-basis: 15.79%;">P3</div>
+    <div class="gantt-block" style="flex-basis: 15.79%;">P4</div>
+    <div class="gantt-block" style="flex-basis: 10.53%;">P1</div>
+    <div class="gantt-block" style="flex-basis: 5.26%;">P2</div>
+    <div class="gantt-block" style="flex-basis: 15.79%;">P3</div>
+  </div>
+  <div class="gantt-times">
+    <span style="flex-basis: 15.79%;">0</span>
+    <span style="flex-basis: 15.79%;">3</span>
+    <span style="flex-basis: 15.79%;">6</span>
+    <span style="flex-basis: 15.79%;">9</span>
+    <span style="flex-basis: 10.53%;">12</span>
+    <span style="flex-basis: 5.26%;">14</span>
+    <span style="flex-basis: 15.79%;">15</span>
+    <span>18</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Sheet</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        table { border-collapse: collapse; }
+        table, th, td { border: 1px solid #333; }
+        td, th { padding: 6px 8px; }
+    </style>
+</head>
+<body>
+    <center><h1>Personal Data Sheet</h1></center>
+    <form>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td><input type="text" name="middle_name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td>Place of Birth:</td>
+                <td><input type="text" name="place_of_birth"></td>
+            </tr>
+            <tr>
+                <td><label>Sex at birth:</label></td>
+                <td>
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Civil Status:</td>
+                <td>
+                    <select name="civil_status">
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Height:</td>
+                <td><input type="text" name="height"></td>
+            </tr>
+            <tr>
+                <td>Weight:</td>
+                <td><input type="text" name="weight"></td>
+            </tr>
+            <tr>
+                <td>Blood Type:</td>
+                <td><input type="text" name="blood_type"></td>
+            </tr>
+            <tr>
+                <td><label>Citizenship</label></td>
+                <td>
+                    <select name="citizenship">
+                        <option>Filipino</option>
+                        <option>Dual Citizen</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Residential Address</td>
+                <td><input type="text" name="residential_address"></td>
+            </tr>
+            <tr>
+                <td>Permanent Address</td>
+                <td><input type="text" name="permanent_address"></td>
+            </tr>
+            <tr>
+                <td>Telephone Number</td>
+                <td><input type="number" name="telephone_number"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="number" name="mobile_number"></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td><input type="email" name="email_address"></td>
+            </tr>
+        </table>
+    </form>
+
+    <center><h3>Family Background</h3></center>
+    <br>
+    <form>
+        <table>
+            <tr>
+                <td>Father's Surname:</td>
+                <td><input type="text" name="father_surname"></td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="father_first_name"></td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td><input type="text" name="father_middle_name"></td>
+            </tr>
+            <tr>
+                <td>Mother's Maiden Name:</td>
+                <td><input type="text" name="mother_maiden_name"></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text" name="mother_surname"></td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="mother_first_name"></td>
+            </tr>
+            <tr>
+                <td>Middle Name:</td>
+                <td><input type="text" name="mother_middle_name"></td>
+            </tr>
+            <tr>
+                <td>Number of Children:</td>
+                <td><input type="number" name="number_of_children" min="0"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="children_dob"></td>
+            </tr>
+        </table>
+    </form>
+
+    <center><h3>Educational Background</h3></center>
+    <br>
+    <center>
+    <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width:100%; text-align:center;">
+        <tr>
+            <th rowspan="2">LEVEL</th>
+            <th rowspan="2">NAME OF SCHOOL<br><small>(Write in full)</small></th>
+            <th rowspan="2">BASIC EDUCATION/DEGREE/COURSE<br><small>(Write in full)</small></th>
+            <th colspan="2">
+                PERIOD OF ATTENDANCE<br>
+                <small>(yyyy)</small>
+            </th>
+            <th rowspan="2">
+                HIGHEST LEVEL /<br>
+                UNITS EARNED<br>
+                <small>(if not graduated)</small>
+            </th>
+            <th rowspan="2">YEAR<br>GRADUATED</th>
+            <th rowspan="2">
+                SCHOLARSHIP/<br>
+                ACADEMIC HONORS<br>
+                RECEIVED
+            </th>
+        </tr>
+        <tr>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>ELEMENTARY</td>
+            <td><input type="text" name="elementary_school"></td>
+            <td><input type="text" name="elementary_degree"></td>
+            <td><input type="text" name="elementary_from"></td>
+            <td><input type="text" name="elementary_to"></td>
+            <td><input type="text" name="elementary_level"></td>
+            <td><input type="text" name="elementary_graduated"></td>
+            <td><input type="text" name="elementary_honors"></td>
+        </tr>
+        <tr>
+            <td>SECONDARY</td>
+            <td><input type="text" name="secondary_school"></td>
+            <td><input type="text" name="secondary_degree"></td>
+            <td><input type="text" name="secondary_from"></td>
+            <td><input type="text" name="secondary_to"></td>
+            <td><input type="text" name="secondary_level"></td>
+            <td><input type="text" name="secondary_graduated"></td>
+            <td><input type="text" name="secondary_honors"></td>
+        </tr>
+        <tr>
+            <td>VOCATIONAL / TRADE COURSE</td>
+            <td><input type="text" name="vocational_school"></td>
+            <td><input type="text" name="vocational_degree"></td>
+            <td><input type="text" name="vocational_from"></td>
+            <td><input type="text" name="vocational_to"></td>
+            <td><input type="text" name="vocational_level"></td>
+            <td><input type="text" name="vocational_graduated"></td>
+            <td><input type="text" name="vocational_honors"></td>
+        </tr>
+        <tr>
+            <td>COLLEGE</td>
+            <td><input type="text" name="college_school"></td>
+            <td><input type="text" name="college_degree"></td>
+            <td><input type="text" name="college_from"></td>
+            <td><input type="text" name="college_to"></td>
+            <td><input type="text" name="college_level"></td>
+            <td><input type="text" name="college_graduated"></td>
+            <td><input type="text" name="college_honors"></td>
+        </tr>
+        <tr>
+            <td>GRADUATE STUDIES</td>
+            <td><input type="text" name="graduate_school"></td>
+            <td><input type="text" name="graduate_degree"></td>
+            <td><input type="text" name="graduate_from"></td>
+            <td><input type="text" name="graduate_to"></td>
+            <td><input type="text" name="graduate_level"></td>
+            <td><input type="text" name="graduate_graduated"></td>
+            <td><input type="text" name="graduate_honors"></td>
+        </tr>
+    </table>
+    </center>
+
+</body>
+</html>
